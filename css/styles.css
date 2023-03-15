@@ -1,0 +1,67 @@
+.grid-flow {
+  gap: 1.5rem;
+  display: grid;
+}
+
+.flex-flow {
+  display: flex;
+  grid-gap: 0.5em;
+  align-items: center;
+}
+.flex-flow[data-gap=auto] {
+  justify-content: space-between;
+}
+.flex-flow[data-gap=fixed] {
+  gap: 1em;
+}
+
+body {
+  display: grid;
+  color: hsl(0, 0%, 100%);
+  place-content: center;
+  background-color: hsl(217, 54%, 11%);
+}
+
+.card {
+  max-width: 20em;
+  border-radius: 1em;
+  padding: 1.5em 1.5em 2em;
+  color: hsl(215, 51%, 70%);
+  background-color: hsl(216, 50%, 16%);
+  box-shadow: 0 2em 4em rgba(0, 0, 0, 0.2);
+}
+.card__thumbnail {
+  width: 100%;
+  border-radius: 0.5em;
+}
+.card__title {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+}
+.card__description {
+  font-weight: 300;
+  line-height: 150%;
+}
+.card__stats__value {
+  color: hsl(178, 100%, 50%);
+}
+.card__stats__timestamp {
+  font-size: 0.78em;
+}
+.card__separator {
+  border: 0.5px solid hsl(215, 32%, 27%);
+}
+.card__author {
+  font-weight: 300;
+}
+.card__author--avatar {
+  height: 2em;
+  border-radius: 50%;
+  border: 1px solid hsl(0, 0%, 100%);
+}
+.card__author--profile {
+  color: hsl(0, 0%, 100%);
+}
+
+/*# sourceMappingURL=styles.css.map */

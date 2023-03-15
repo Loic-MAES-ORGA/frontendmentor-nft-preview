@@ -1,3 +1,24 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  color: currentColor;
+  text-decoration: none;
+  box-sizing: border-box;
+}
 
+body {
+  width: 100%;
+  font-size: 18px;
+  min-height: 100vh;
+  font-family: "Outfit", "Helvetic", "Arial", sans-serif;
+}
+@media screen and (max-width: 375px) {
+  body {
+    font-size: 16px;
+  }
+}
 
 /*# sourceMappingURL=normalize.css.map */

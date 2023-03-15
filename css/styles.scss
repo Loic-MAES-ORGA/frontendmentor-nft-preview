@@ -1,0 +1,80 @@
+@use "colors";
+
+.grid-flow {
+  gap: 1.5rem;
+  display: grid;
+}
+
+.flex-flow {
+  display: flex;
+  grid-gap: .5em;
+  align-items: center;
+
+  &[data-gap="auto"] {
+    justify-content: space-between;
+  }
+
+  &[data-gap="fixed"] {
+    gap: 1em;
+  }
+}
+
+body {
+  display: grid;
+  color: colors.$white;
+  place-content: center;
+  background-color: colors.$main-bg;
+}
+
+.card {
+  max-width: 20em;
+  border-radius: 1em;
+  padding: 1.5em 1.5em 2em;
+  color: colors.$soft-blue;
+  background-color: colors.$card-bg;
+  box-shadow: 0 2em 4em rgba(0, 0, 0, .2);
+
+  &__thumbnail {
+    width: 100%;
+    border-radius: .5em;
+  }
+
+  &__title {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: colors.$white;
+  }
+
+  &__description {
+    font-weight: 300;
+    line-height: 150%;
+  }
+
+  &__stats {
+    &__value {
+      color: colors.$cyan;
+    }
+
+    &__timestamp {
+      font-size: .78em;
+    }
+  }
+
+  &__separator {
+    border: .5px solid colors.$line;
+  }
+
+  &__author {
+    font-weight: 300;
+
+    &--avatar {
+      height: 2em;
+      border-radius: 50%;
+      border: 1px solid colors.$white;
+    }
+
+    &--profile {
+      color: colors.$white;
+    }
+  }
+}

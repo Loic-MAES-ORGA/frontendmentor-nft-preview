@@ -1,1 +1,22 @@
 // TODO: Normalize styles
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  color: currentColor;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  font-size: 18px; // See in guidelines
+  min-height: 100vh;
+  font-family: 'Outfit', 'Helvetic', 'Arial', sans-serif;
+
+  @media screen and (max-width: 375px) {
+    font-size: 16px;
+  }
+}
