@@ -32,12 +32,52 @@ body {
 }
 .card__thumbnail {
   width: 100%;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
   border-radius: 0.5em;
 }
+.card__thumbnail--img {
+  width: 100%;
+  display: block;
+}
+.card__thumbnail--overlay {
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  position: absolute;
+  aspect-ratio: 1/1;
+  place-content: center;
+  background-color: transparent;
+  transition: opacity 200ms ease-in-out;
+}
+.card__thumbnail--overlay > svg {
+  z-index: 1;
+  position: relative;
+}
+.card__thumbnail--overlay::before {
+  top: 0;
+  left: 0;
+  content: "";
+  opacity: 0.3;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: hsl(178, 100%, 50%);
+}
+.card__thumbnail:hover .card__thumbnail--overlay {
+  opacity: 1;
+}
 .card__title {
+  cursor: pointer;
   font-size: 1.5em;
   font-weight: 700;
   color: hsl(0, 0%, 100%);
+  transition: all 200ms ease-in-out;
+}
+.card__title:hover {
+  color: hsl(178, 100%, 50%);
 }
 .card__description {
   font-weight: 300;
@@ -62,6 +102,10 @@ body {
 }
 .card__author--profile {
   color: hsl(0, 0%, 100%);
+  transition: all 200ms ease-in-out;
+}
+.card__author--profile:hover {
+  color: hsl(178, 100%, 50%);
 }
 
 /*# sourceMappingURL=styles.css.map */

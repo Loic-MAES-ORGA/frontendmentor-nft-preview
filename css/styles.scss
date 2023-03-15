@@ -36,13 +36,63 @@ body {
 
   &__thumbnail {
     width: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
     border-radius: .5em;
+
+    &--img {
+      width: 100%;
+      display: block;
+    }
+
+    &--overlay {
+      top: 0;
+      left: 0;
+      opacity: 0;
+      width: 100%;
+      position: absolute;
+      aspect-ratio: 1 / 1;
+      place-content: center;
+      background-color: transparent;
+      transition: opacity 200ms ease-in-out;
+
+      > svg {
+        z-index: 1;
+        position: relative;
+      }
+
+      &::before {
+        top: 0;
+        left: 0;
+        content: '';
+        opacity: .3;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: colors.$cyan;
+      }
+    }
+
+    &:hover {
+      .card__thumbnail {
+        &--overlay {
+          opacity: 1;
+        }
+      }
+    }
   }
 
   &__title {
+    cursor: pointer;
     font-size: 1.5em;
     font-weight: 700;
     color: colors.$white;
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+      color: colors.$cyan;
+    }
   }
 
   &__description {
@@ -75,6 +125,11 @@ body {
 
     &--profile {
       color: colors.$white;
+      transition: all 200ms ease-in-out;
+
+      &:hover {
+        color: colors.$cyan;
+      }
     }
   }
 }
